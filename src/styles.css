@@ -1,0 +1,58 @@
+.fixBackground {
+  position: fixed;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background-image: linear-gradient(to bottom, #3d78d4, #009ced, #00bbea, #00d5cf, #12eba7);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.searchSection {
+  position: relative;
+  text-align: center;
+  height: 30px;
+  margin-bottom: 40px;
+}
+.searchWraper {
+  position: relative;
+  text-align: center;
+  width: 300px;
+  margin: auto;
+}
+.txtSeachBox {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  left: -20px;
+  right: 0px;
+  border-radius: 99px;
+  border: 0px;
+  z-index: 1;
+  background: rgb(79,79,79);
+  background: linear-gradient(180deg, rgba(79,79,79,1) 0%, rgba(41,41,41,1) 60%, rgba(0,0,0,1) 100%);
+  padding: 0px 0px 0px 20px;
+  color: white;
+  line-height: 20px;
+  font-size: 15px;
+}
+.btnSeachBoxSubmit {
+  position: absolute;
+  right: 0px;
+  z-index: 2;
+  height: 30px;
+  border-radius: 99px;
+  border: 0px;
+  background: rgb(31,156,220);
+  background: linear-gradient(180deg, rgba(31,156,220,1) 0%, rgba(27,107,148,1) 100%);
+}
+.searchMessage {
+  position: absolute;
+  top: 35px;
+  text-align: center;
+  width: 100%;
+}

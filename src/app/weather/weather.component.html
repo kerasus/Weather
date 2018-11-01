@@ -1,0 +1,38 @@
+  <div class="weatherOfToday_warper" *ngIf="weatherInf.consolidated_weather!=undefined" (click)="showForecast(weatherInf)">
+    <div class="weatherOfToday_dayOfWeek">
+      {{ weatherInf.consolidated_weather[0].applicable_date }} {{ utilityService.getDayOfWeek(weatherInf.consolidated_weather[0].applicable_date) }}
+    </div>
+    <div class="weatherOfToday_data">
+      {{ weatherInf.title }}
+      <br>
+      <div>
+        <p class="weatherOfToday_MinMax">
+          min: {{ Math.round(weatherInf.consolidated_weather[0].max_temp * 100) / 100 }}°C
+          <br>
+          max: {{ Math.round(weatherInf.consolidated_weather[0].min_temp * 100) / 100 }}°C
+        </p>
+        <p class="weatherOfToday_theTemp">
+          {{ Math.round(weatherInf.consolidated_weather[0].the_temp * 100) / 100 }}°C
+        </p>
+        <img class="weatherStateIcon" src="assets/img/{{ weatherInf.consolidated_weather[0].weather_state_abbr }}.svg" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="weatherOfToday_warper" *ngIf="weatherInf.consolidated_weather==undefined">
+    <div class="weatherOfToday_dayOfWeek">...</div>
+    <div class="weatherOfToday_data">
+      waiting ...
+      <br>
+      <div>
+        <p class="weatherOfToday_MinMax">
+          min: ...°C
+          <br>
+          max: ...°C
+        </p>
+        <p class="weatherOfToday_theTemp">
+          ...°C
+        </p>
+        <img class="weatherStateIcon" src="assets/img/waiting.gif" alt="">
+      </div>
+    </div>
+  </div>

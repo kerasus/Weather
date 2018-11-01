@@ -1,0 +1,18 @@
+<div class="searchSection">
+  <div class="searchWraper">
+    <input type="text" name="searchTerm" class="txtSeachBox" [(ngModel)]="keyword" >
+    <input type="submit" name="btnSearch" class="btnSeachBoxSubmit" value="search" (click)="searchKeyword()">
+  </div>
+  <div class="searchMessage">
+    {{ searchMessage }}
+  </div>
+</div>
+
+<div class="content">
+  <weather [woeid]="2344116"></weather>
+  <weather [woeid]="638242"></weather>
+  <weather [woeid]="44418"></weather>
+  <weather [woeid]="565346"></weather>
+  <weather [woeid]="560743"></weather>
+  <weather [woeid]="9807"></weather>
+</div>

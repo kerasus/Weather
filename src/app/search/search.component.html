@@ -1,0 +1,18 @@
+<div class="searchSection">
+  <div class="searchWraper">
+    <input type="text" name="searchTerm" class="txtSeachBox" [(ngModel)]="keyword" >
+    <input type="submit" name="btnSearch" class="btnSeachBoxSubmit" value="search" (click)="searchKeyword(keyword)">
+  </div>
+  <div class="searchMessage">
+    {{ searchMessage }}
+  </div>
+</div>
+
+<div class="searchResultWarper" *ngIf="searchResult.length!=0">
+  <div *ngFor="let item of searchResult; let i = index">
+    <weather [woeid]="item.woeid"></weather>
+  </div>
+</div>
+<div *ngIf="searchResult.length==0">
+  there is nu result!
+</div>

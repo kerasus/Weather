@@ -1,0 +1,35 @@
+.weatherOfToday_warper {
+  width: 450px;
+  background: #323546;
+  color: white;
+  border-radius: 15px;
+  display: inline-block;
+  margin: 10px;
+}
+.weatherOfToday_warper .weatherOfToday_dayOfWeek {
+  background: #2c2f3e;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  padding: 5px 20px;
+}
+.weatherOfToday_warper .weatherOfToday_data {
+  padding: 10px;
+}
+.weatherOfToday_warper .weatherOfToday_data .weatherStateIcon {
+  width: 60px;
+  display: inline-block;
+  line-height: 60px;
+}
+.weatherOfToday_warper .weatherOfToday_data .weatherOfToday_theTemp {
+  display: inline-block;
+  line-height: 60px;
+  margin: 0px 10px;
+  font-size: 60px;
+}
+.weatherOfToday_warper .weatherOfToday_data .weatherOfToday_MinMax {
+  display: inline-block;
+  width: 90px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0px;
+}

@@ -1,0 +1,35 @@
+<div class="forecastWeatherTableWarper" *ngIf="weatherInf.consolidated_weather!=undefined">
+  <table class="forecastWeatherTable">
+    <thead>
+      <tr>
+        <th *ngFor="let item of weatherInf.consolidated_weather; let i = index">
+            {{ item.applicable_date }}
+            <br>
+            {{ utilityService.getDayOfWeek(item.applicable_date) }}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td *ngFor="let item of weatherInf.consolidated_weather; let i = index">
+          <div>
+            <p class="weatherOfToday_theTemp">
+              {{ Math.round(item.the_temp * 100) / 100 }}°C
+            </p>
+            <img class="weatherStateIcon" src="assets/img/{{ item.weather_state_abbr }}.svg" alt="">
+            <p class="weatherOfToday_MinMax">
+              min: {{ Math.round(item.max_temp * 100) / 100 }}°C
+              <br>
+              max: {{ Math.round(item.min_temp * 100) / 100 }}°C
+            </p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="forecastWeatherTableWarper" *ngIf="weatherInf.consolidated_weather==undefined">
+  waiting ...
+  <br>
+  <img class="weatherStateIcon" src="assets/img/waiting.gif" alt="">
+</div>

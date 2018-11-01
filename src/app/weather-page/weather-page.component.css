@@ -1,0 +1,31 @@
+.forecastWeatherTableWarper {
+  text-align: center;
+}
+.forecastWeatherTable {
+  width: 450px;
+  background: #323546;
+  color: white;
+  border-radius: 4px;
+  margin: auto;
+}
+.forecastWeatherTable thead tr th {
+  background: #2c2f3e;
+}
+.forecastWeatherTable tbody tr td {
+  padding: 10px;
+}
+.forecastWeatherTable tbody tr td .weatherOfToday_MinMax {
+  width: 90px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0px;
+}
+.forecastWeatherTable tbody tr td .weatherOfToday_theTemp {
+  line-height: 60px;
+  margin: 0px 10px;
+  font-size: 30px;
+}
+.forecastWeatherTable tbody tr td .weatherStateIcon {
+  width: 60px;
+  line-height: 60px;
+}
